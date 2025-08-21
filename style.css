@@ -1,0 +1,223 @@
+/* Background and general styling */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    background-size: 800% 800%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    padding: 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(255,255,255,0.6);
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    cursor: pointer;
+    min-height: 30px;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Canvas hearts */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Envelope Button */
+.envelope-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: white;
+    border: none;
+    font-size: 2.5rem;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    z-index: 3;
+}
+.envelope-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Camera Button */
+.camera-btn {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: white;
+    border: none;
+    font-size: 2.5rem;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+    z-index: 3;
+}
+.camera-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Modal base style */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: none; /* hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+}
+
+/* Letter Modal */
+.letter {
+    background: #fff8f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.8);
+    width: 320px;
+    max-width: 90%;
+    animation: slideDown 0.5s ease forwards;
+    color: #5a3e36;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.letter-content {
+    font-size: 1rem;
+    line-height: 1.6;
+    white-space: pre-line;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#closeLetter {
+    margin-top: 15px;
+    padding: 8px 12px;
+    border: none;
+    background: #ff9a9e;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background 0.3s;
+}
+#closeLetter:hover {
+    background: #ff6f91;
+}
+
+/* Gallery Modal */
+.gallery-container {
+    background: #fff8f0;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.9);
+    max-width: 60vw;    /* reduced from 90vw */
+    max-height: 60vh;   /* reduced from 80vh */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: slideDown 0.5s ease forwards;
+    overflow: hidden;
+}
+
+.gallery-container img {
+    max-width: 80%;   /* reduced from 100% */
+    max-height: 50vh; /* reduced from 65vh */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+}
+
+
+#galleryCaption {
+    font-family: 'Poppins', sans-serif;
+    color: #5a3e36;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.gallery-controls {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.gallery-controls button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #ff9a9e;
+    color: white;
+    transition: background 0.3s;
+}
+
+.gallery-controls button:hover {
+    background: #ff6f91;
+}
+
+#closeGallery {
+    padding: 8px 16px;
+    border: none;
+    background: #ff9a9e;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: background 0.3s;
+}
+#closeGallery:hover {
+    background: #ff6f91;
+}

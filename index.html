@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>For <span id="name">My Love</span> ❤️</h1>
+        <p id="message">Click anywhere to get a surprise 💌</p>
+    </div>
+
+    <!-- Envelope Button -->
+    <button id="envelopeBtn" class="envelope-btn" title="Open your love letter">💌</button>
+
+    <!-- Letter Modal -->
+    <div id="letterModal" class="modal">
+        <div class="letter">
+            <div class="letter-content">
+                <p>
+                    to the love of my life,
+
+ i honestly don’t even know where to start because no words will ever feel enough to tell you how much you mean to me. i just know that the day you were born, the world got better,  and so did mine the moment you walked into it.
+
+i'm so grateful you were born, because without you, life wouldn’t feel this warm, this safe, or this full of love. you've shown me what it means to be loved deeply, to be understood, and to be someone’s home. you are not just my boyfriend dudu you’re my best story, my favorite memory, and my greatest blessing.
+
+i’m so proud of the person you are, and i can’t wait to see everything this year brings you. i’ll be right here for it all, cheering for you, annoying you, and loving you endlessly.
+
+here's to you, to us, and to all the years ahead.
+
+always,
+bubu🤍
+                </p>
+            </div>
+            <button id="closeLetter">Close ✨</button>
+        </div>
+    </div>
+    <!-- Camera Button -->
+    <button id="cameraBtn" class="camera-btn" title="View our photos">📷</button>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="modal">
+        <div class="gallery-container">
+            <img id="galleryImage" src="" alt="Photo" />
+            <p id="galleryCaption"></p>
+            <div class="gallery-controls">
+                <button id="prevPhoto">← Prev</button>
+                <button id="nextPhoto">Next →</button>
+            </div>
+            <button id="closeGallery">Close ✨</button>
+        </div>
+    </div>
+
+
+    <canvas id="hearts"></canvas>
+    <script src="script.js"></script>
+</body>
+
+</html>
